@@ -22,20 +22,21 @@ footer {
     -webkit-border-radius: 3px;
     border-radius: 3px;
     -khtml-border-radius: 3px;
-}
-
-.presentation-card:hover {
-    box-shadow: 0px 0px 8px 0px;
-}
-
-.cardLeft header,
-.cardLeft section {
-    text-align: end;
-}
-
-.cardRight header,
-.cardRight section {
-    text-align: start;
+    &:hover {
+        box-shadow: 0px 0px 8px 0px;
+    }
+    &:nth-of-type(even) {
+        header,
+        section {
+            text-align: end;
+        }
+    }
+    &:nth-of-type(odd) {
+        header,
+        section {
+            text-align: start;
+        }
+    }
 }
 
 .fab {
