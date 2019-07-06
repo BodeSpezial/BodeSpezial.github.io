@@ -1,0 +1,18 @@
+.navbar {
+    width: 100%;
+    background-color: rgb(152, 250, 242);
+}
+
+footer {
+    width: 100%;
+    background-color: rgb(152, 250, 242);
+}
+
+.presentation-card {
+    margin: 40px;
+    box-shadow: 0px 0px 5px 0px rgb(126, 126, 126);
+}
+
+.presentation-card:hover {
+    box-shadow: 0px 0px 8px 0px;
+}
