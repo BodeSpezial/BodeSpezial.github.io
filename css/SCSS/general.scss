@@ -3,6 +3,7 @@ body {
 }
 
 .site_header {
+    display: grid;
     background: url(../utils/img/header_img_code_screen.jpg), darkgray;
     background-position-x: 10%;
     background-size: auto 100vh;
@@ -35,6 +36,10 @@ body {
                 display: block;
             }
         }
+    }
+    #subtitle {
+        color: white;
+        text-align: center;
     }
 }
 

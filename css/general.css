@@ -3,6 +3,7 @@ body {
 }
 
 .site_header {
+  display: grid;
   background: url(../utils/img/header_img_code_screen.jpg), darkgray;
   background-position-x: 10%;
   background-size: auto 100vh;
@@ -36,6 +37,10 @@ body {
   .site_header .cust_nav label {
     display: block;
   }
+}
+.site_header #subtitle {
+  color: white;
+  text-align: center;
 }
 
 footer {
