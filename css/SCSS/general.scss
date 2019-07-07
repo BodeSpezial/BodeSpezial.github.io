@@ -3,7 +3,7 @@
     width: 100%;
     background-color: rgb(90, 90, 90);
     a {
-        color: black;
+        color: aliceblue;
         margin: 20px;
         background: linear-gradient( to bottom, rgb(144, 144, 144), rgb(144, 144, 144));
         background-position: 0 100%;
@@ -28,7 +28,10 @@
 }
 
 footer {
-    margin: 10px 0px;
+    position: absolute;
+    bottom: 0;
+    left: 0; // necessary, 'cause of the position: absolute
+    // push the footer to the bottom, even if the body is not high enough. 
     padding: 5px 0px;
     width: 100%;
     background-color: rgb(90, 90, 90);
