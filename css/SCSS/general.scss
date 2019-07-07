@@ -1,17 +1,47 @@
-.navbar {
+.cust_nav {
     padding: 30px 0px;
     width: 100%;
-    background-color: rgb(208, 255, 251);
+    background-color: rgb(90, 90, 90);
+    a {
+        color: black;
+        margin: 20px;
+        background: linear-gradient( to bottom, rgb(144, 144, 144), rgb(144, 144, 144));
+        background-position: 0 100%;
+        background-repeat: repeat-x;
+        background-size: 4px 4px;
+        transition: background-size .2s, padding .2s;
+        text-decoration: none;
+        &:hover {
+            padding: 20px;
+            background-size: 4px 70px;
+        }
+    }
+    label,
+    input[type=checkbox] {
+        display: none;
+    }
+    @media screen and (max-width: 1000px) {
+        label {
+            display: block;
+        }
+    }
 }
 
 footer {
     margin: 10px 0px;
     padding: 5px 0px;
     width: 100%;
-    background-color: rgb(208, 255, 251);
+    background-color: rgb(90, 90, 90);
     p {
         margin: 0;
         text-align: center;
+    }
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    .fab {
+        margin: 4px;
     }
 }
 
@@ -30,15 +60,24 @@ footer {
         section {
             text-align: end;
         }
+        img {
+            float: left;
+        }
     }
     &:nth-of-type(odd) {
         header,
         section {
             text-align: start;
         }
+        img {
+            float: right;
+        }
     }
-}
-
-.fab {
-    margin: 4px;
+    .link {
+        a {
+            color: rgb(44, 128, 255);
+            text-decoration: none;
+            margin: 1em;
+        }
+    }
 }
