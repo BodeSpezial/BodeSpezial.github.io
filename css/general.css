@@ -4,12 +4,14 @@ body {
 
 .site_header {
   display: grid;
+  grid-template: "navbar" 0.3fr "title" 4fr "subtitle" 1fr;
   background: url(../utils/img/header_img_code_screen.jpg), darkgray;
   background-position-x: 10%;
   background-size: auto 100vh;
   height: 100vh;
 }
 .site_header .cust_nav {
+  grid-row: navbar;
   padding: 30px 0px;
   width: 100%;
   background-color: #5a5a5a;
@@ -38,28 +40,19 @@ body {
     display: block;
   }
 }
+.site_header #title {
+  grid-row: title;
+  color: white;
+  margin: auto auto;
+}
 .site_header #subtitle {
+  grid-row: subtitle;
   color: white;
   text-align: center;
 }
 
-footer {
-  bottom: 0;
-  left: 0;
-  padding: 5px 0px;
-  width: 100%;
-  background-color: #5a5a5a;
-}
-footer p {
-  margin: 0;
-  text-align: center;
-}
-footer a {
-  color: black;
-  text-decoration: none;
-}
-footer .fab {
-  margin: 4px;
+#body-sec {
+  display: grid;
 }
 
 .presentation-card {
@@ -92,6 +85,25 @@ footer .fab {
   text-decoration: none;
   margin: 1em;
   font-family: "Cutive Mono", sans-serif;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  padding: 5px 0px;
+  width: 100%;
+  background-color: #5a5a5a;
+}
+footer p {
+  margin: 0;
+  text-align: center;
+}
+footer a {
+  color: black;
+  text-decoration: none;
+}
+footer .fab {
+  margin: 4px;
 }
 
 /*# sourceMappingURL=general.css.map */
