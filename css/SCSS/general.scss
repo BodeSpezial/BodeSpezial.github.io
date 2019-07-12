@@ -5,7 +5,7 @@ body {
 .site_header {
     display: grid;
     grid-template: 'navbar' 0.3fr 'title' 4fr 'subtitle' 1fr;
-    background: url(../utils/img/header_img_code_screen.jpg), darkgray;
+    background: linear-gradient(to bottom, rgba(90, 90, 90, 0.4), rgba(90, 90, 90, 0.4)), url(../utils/img/header_img_code_screen.jpg);
     background-position-x: 10%;
     background-size: auto 100vh;
     height: 100vh;
