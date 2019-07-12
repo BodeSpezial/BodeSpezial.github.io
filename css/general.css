@@ -4,7 +4,7 @@ body {
 
 .site_header {
   display: grid;
-  grid-template: "navbar" 0.3fr "title" 4fr "subtitle" 1fr;
+  grid-template: "navbar" 0.3fr "title" 5fr "subtitle" 2fr;
   background: linear-gradient(to bottom, rgba(90, 90, 90, 0.4), rgba(90, 90, 90, 0.4)), url(../utils/img/header_img_code_screen.jpg);
   background-position-x: 10%;
   background-size: auto 100vh;
@@ -45,10 +45,24 @@ body {
   color: white;
   margin: auto auto;
 }
+.site_header #title p {
+  font-family: "Athiti";
+  font-size: 2em;
+  text-align: center;
+  margin: 3px;
+}
+.site_header #title #social-buttons .fa-twitter:hover {
+  color: #3b7fcc;
+}
+.site_header #title #social-buttons i {
+  margin: 1em;
+}
 .site_header #subtitle {
   grid-row: subtitle;
   color: white;
   text-align: center;
+  font-family: "Athiti";
+  font-size: 150%;
 }
 
 #body-sec {
