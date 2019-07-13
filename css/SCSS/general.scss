@@ -1,115 +1,178 @@
-body {
-    margin: 0;
-}
-
-.site_header {
-    display: grid;
-    grid-template: 'navbar' 0.3fr 'title' 4fr 'subtitle' 1fr;
-    background: url(../utils/img/header_img_code_screen.jpg), darkgray;
-    background-position-x: 10%;
-    background-size: auto 100vh;
-    height: 100vh;
-    .cust_nav {
-        grid-row: navbar;
-        padding: 30px 0px;
-        width: 100%;
-        background-color: rgb(90, 90, 90);
-        a {
-            color: aliceblue;
-            margin: 20px;
-            text-decoration: none;
-            font-family: 'Roboto', monospace;
-            background: linear-gradient( to bottom, rgb(144, 144, 144), rgb(144, 144, 144));
-            background-position: 0 100%;
-            background-repeat: repeat-x;
-            background-size: 4px 4px;
-            transition: background-size .2s, padding .2s;
-            &:hover {
-                padding: 20px;
-                background-size: 4px 70px;
-            } // animate, so that the links 'pop up'/'grow' when you hover over
+        body {
+            margin: 0;
         }
-        label,
-        input[type=checkbox] {
-            display: none;
-        }
-        @media screen and (max-width: 1000px) {
-            label {
-                display: block;
+        
+        .site_header {
+            display: grid;
+            grid-template: 'navbar' 0.3fr 'title' 5fr 'subtitle' 2fr;
+            background: linear-gradient(to bottom, rgba(90, 90, 90, 0.5), rgba(90, 90, 90, 0.4)), url(../utils/img/header_img_code_screen.jpg);
+            background-position-x: 10%;
+            background-size: auto 100vh;
+            height: 100vh;
+            .cust_nav {
+                grid-row: navbar;
+                padding: 30px 0px;
+                width: 100%;
+                text-align: center;
+                a {
+                    color: aliceblue;
+                    margin: 20px;
+                    text-decoration: none;
+                    font-family: 'Roboto', monospace;
+                    background: linear-gradient( to bottom, rgb(144, 144, 144), rgb(144, 144, 144));
+                    background-position: 0 100%;
+                    background-repeat: repeat-x;
+                    background-size: 4px 4px;
+                    transition: background-size .2s, padding .2s;
+                    &:hover {
+                        padding: 20px;
+                        background-size: 4px 70px;
+                    } // animate, so that the links 'pop up'/'grow' when you hover over
+                }
+                label,
+                input[type=checkbox] {
+                    display: none;
+                }
+                @media screen and (max-width: 1000px) {
+                    label {
+                        display: block;
+                    }
+                }
+            }
+            #title {
+                grid-row: title;
+                color: white;
+                margin: auto auto;
+                p {
+                    font-family: 'Athiti';
+                    font-size: 2em;
+                    text-align: center;
+                    margin: 3px;
+                }
+                #social-buttons {
+                    i {
+                        margin: 1em;
+                    }
+                    .fa-twitter:hover {
+                        color: #1da1f2;
+                    }
+                    .fa-instagram:hover {
+                        color: #ef4b59;
+                    }
+                    .fa-wordpress:hover {
+                        color: #016087;
+                    }
+                }
+            }
+            #subtitle {
+                grid-row: subtitle;
+                color: white;
+                text-align: center;
+                font-family: 'Athiti';
+                margin: auto auto;
+                margin-top: -2.5em;
+                font-size: 1.5em;
+                text-decoration: none;
+                // nach unten zeigender 'doppelpfeil'
+                &::before {
+                    content: "";
+                    display: block;
+                    position: relative;
+                    top: 4.5em;
+                    left: 50%; //50 prozent zum parent element
+                    transform: translateX(-50%) rotate(45deg); //box über den Mittelpunkt versetzen(nullpunkt ist in einer ecke, nicht mittig)
+                    width: 3em;
+                    height: 3em;
+                    border: whitesmoke solid 4px;
+                    border-top: none;
+                    border-left: none;
+                    transition: .8s;
+                }
+                &::after {
+                    content: "";
+                    display: block;
+                    position: relative;
+                    left: 50%;
+                    top: 0.5em;
+                    transform: translateX(-50%) rotate(45deg);
+                    width: 3em;
+                    height: 3em;
+                    border: whitesmoke solid 4px;
+                    border-top: none;
+                    border-left: none;
+                    transition: .8s;
+                }
+                // animation
+                &:hover::before {
+                    transition: .8s;
+                    top: 5em;
+                }
+                &:hover::after {
+                    transition: 1s;
+                    top: 2em;
+                }
             }
         }
-    }
-    #title {
-        grid-row: title;
-        color: white;
-        margin: auto auto;
-    }
-    #subtitle {
-        grid-row: subtitle;
-        color: white;
-        text-align: center;
-    }
-}
-
-#body-sec {
-    display: grid;
-}
-
-.presentation-card {
-    margin: 40px;
-    box-shadow: 0px 0px 5px 0px rgb(126, 126, 126);
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    -khtml-border-radius: 3px;
-    &:hover {
-        box-shadow: 0px 0px 8px 0px;
-    }
-    &:nth-of-type(even) {
-        header,
-        section {
-            text-align: end;
+        
+        main {
+            display: grid;
         }
-        img {
-            float: left;
+        
+        .presentation-card {
+            margin: 40px;
+            box-shadow: 0px 0px 5px 0px rgb(126, 126, 126);
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            -khtml-border-radius: 3px;
+            &:hover {
+                box-shadow: 0px 0px 8px 0px;
+            }
+            &:nth-of-type(even) {
+                header,
+                section {
+                    text-align: end;
+                }
+                img {
+                    float: left;
+                }
+            }
+            &:nth-of-type(odd) {
+                header,
+                section {
+                    text-align: start;
+                }
+                img {
+                    float: right;
+                }
+            }
+            .link {
+                a {
+                    color: rgb(44, 128, 255);
+                    text-decoration: none;
+                    margin: 1em;
+                    font-family: "Cutive Mono", sans-serif;
+                }
+            }
         }
-    }
-    &:nth-of-type(odd) {
-        header,
-        section {
-            text-align: start;
+        
+        footer {
+            // position: absolute;
+            bottom: 0;
+            left: 0; // necessary, 'cause of the position: absolute
+            // push the footer to the bottom, even if the body is not high enough. 
+            padding: 5px 0px;
+            width: 100%;
+            background-color: rgb(90, 90, 90);
+            p {
+                margin: 0;
+                text-align: center;
+            }
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            .fab {
+                margin: 4px;
+            }
         }
-        img {
-            float: right;
-        }
-    }
-    .link {
-        a {
-            color: rgb(44, 128, 255);
-            text-decoration: none;
-            margin: 1em;
-            font-family: "Cutive Mono", sans-serif;
-        }
-    }
-}
-
-footer {
-    // position: absolute;
-    bottom: 0;
-    left: 0; // necessary, 'cause of the position: absolute
-    // push the footer to the bottom, even if the body is not high enough. 
-    padding: 5px 0px;
-    width: 100%;
-    background-color: rgb(90, 90, 90);
-    p {
-        margin: 0;
-        text-align: center;
-    }
-    a {
-        color: black;
-        text-decoration: none;
-    }
-    .fab {
-        margin: 4px;
-    }
-}
