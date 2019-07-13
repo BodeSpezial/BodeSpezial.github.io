@@ -68,7 +68,46 @@ body {
   color: white;
   text-align: center;
   font-family: "Athiti";
-  font-size: 150%;
+  margin: auto auto;
+  margin-top: -2.5em;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+.site_header #subtitle::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 4.5em;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 3em;
+  height: 3em;
+  border: whitesmoke solid 4px;
+  border-top: none;
+  border-left: none;
+  transition: 0.8s;
+}
+.site_header #subtitle::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 0.5em;
+  transform: translateX(-50%) rotate(45deg);
+  width: 3em;
+  height: 3em;
+  border: whitesmoke solid 4px;
+  border-top: none;
+  border-left: none;
+  transition: 0.8s;
+}
+.site_header #subtitle:hover::before {
+  transition: 0.8s;
+  top: 5em;
+}
+.site_header #subtitle:hover::after {
+  transition: 1s;
+  top: 2em;
 }
 
 main {
