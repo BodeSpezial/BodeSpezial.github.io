@@ -1,6 +1,11 @@
 body {
   margin: 0;
-  overflow: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .site_header {
@@ -172,7 +177,7 @@ footer p {
   text-align: center;
 }
 footer a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 footer .fab {

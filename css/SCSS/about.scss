@@ -1,0 +1,11 @@
+    body {
+        overflow: visible;
+    }
+    
+    .site_header {
+        display: grid;
+        grid-template: 'navbar' 0.3fr 'title' 5fr;
+        background: linear-gradient(to bottom, rgba(85, 162, 207, 0.932), rgba(109, 203, 231, 0.925));
+        background-size: auto;
+        height: auto;
+    }
