@@ -1,6 +1,12 @@
 body {
     margin: 0;
-    overflow: hidden;
+    // overflow: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .site_header {
@@ -181,7 +187,7 @@ footer {
         text-align: center;
     }
     a {
-        color: black;
+        color: white;
         text-decoration: none;
     }
     .fab {
